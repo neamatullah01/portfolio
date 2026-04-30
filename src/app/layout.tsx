@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} font-sans h-full antialiased`}
+      className={`${poppins.variable} font-sans h-full antialiased scroll-smooth`}
       suppressHydrationWarning
     >
       <body

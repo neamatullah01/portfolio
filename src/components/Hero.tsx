@@ -283,7 +283,7 @@ export function Hero() {
         initial={mounted ? { opacity: 0 } : false}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 lg:left-12 lg:translate-x-0 xl:left-24 flex items-center gap-2 text-gray-400 dark:text-gray-400 text-sm"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 flex items-center gap-2 text-gray-400 dark:text-gray-400 text-sm"
       >
         <div className="w-5 h-8 border-2 border-gray-400 rounded-full flex justify-center p-1">
           <motion.div

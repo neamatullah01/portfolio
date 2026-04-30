@@ -211,7 +211,13 @@ export default function TechStack() {
   return (
     <section id="tech-stack" className="py-24 px-4 md:px-8 w-full max-w-7xl mx-auto">
       {/* Header Section */}
-      <div className="text-center mb-16 flex flex-col items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16 flex flex-col items-center"
+      >
         <h3 className="text-sm font-semibold tracking-[0.2em] text-gray-500 dark:text-gray-400 uppercase mb-3">
           My Expertise
         </h3>
@@ -222,10 +228,16 @@ export default function TechStack() {
           A comprehensive toolkit for building modern, scalable web applications
           and exploring AI.
         </p>
-      </div>
+      </motion.div>
 
       {/* Category Filter Pills */}
-      <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-16 max-w-5xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex flex-wrap justify-center gap-3 md:gap-4 mb-16 max-w-5xl mx-auto"
+      >
         {skillCategories.map((category) => (
           <button
             key={category.id}
@@ -253,7 +265,7 @@ export default function TechStack() {
             </span>
           </button>
         ))}
-      </div>
+      </motion.div>
 
       {/* Animated Skill Cards Grid */}
       <motion.div

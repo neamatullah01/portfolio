@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 export default function Home() {
@@ -8,9 +9,9 @@ export default function Home() {
       <AnimatedBackground />
       <Navbar />
       <Hero />
+      <About />
       {/* 
         Remaining sections to be added:
-        - About
         - Tech Stack / Skills
         - Qualification
         - Projects

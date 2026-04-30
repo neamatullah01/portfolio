@@ -10,19 +10,19 @@ import { useEffect, useState } from "react";
 const socialLinks = [
   {
     icon: FaLinkedin,
-    href: "#",
+    href: "https://www.linkedin.com/in/neamatullah01",
     label: "LinkedIn",
     className: "text-blue-600 dark:text-blue-400",
   },
   {
     icon: FaGithub,
-    href: "#",
+    href: "https://github.com/neamatullah01",
     label: "GitHub",
     className: "text-gray-800 dark:text-gray-100",
   },
   {
     icon: FaTwitter,
-    href: "#",
+    href: "https://x.com/01neamat",
     label: "X / Twitter",
     className: "text-sky-500 dark:text-sky-400",
   },

@@ -9,7 +9,7 @@
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-card: var(--card);
-  --font-sans: var(--font-poppins);
+  --font-sans: var(--font-montserrat);
   --font-mono: var(--font-geist-mono);
 }
 

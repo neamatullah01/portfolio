@@ -152,7 +152,7 @@ export function Hero() {
 
           {/* Animated Say Hello Button */}
           <div className="pt-2 flex justify-center lg:justify-start">
-            <Link
+            <a
               href="#contact"
               className="group relative inline-flex items-center gap-3 px-6 py-3 rounded-full font-medium text-sm sm:text-base overflow-hidden border border-black/15 dark:border-white/10 text-gray-800 dark:text-white shadow-sm transition-all duration-300 hover:shadow-violet-500/20 hover:shadow-lg hover:border-violet-400/50 hover:scale-[1.03]"
             >
@@ -172,7 +172,7 @@ export function Hero() {
               >
                 <Send className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.span>
-            </Link>
+            </a>
           </div>
         </motion.div>
 

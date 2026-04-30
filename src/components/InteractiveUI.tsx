@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
 export default function InteractiveUI() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+
+  const { scrollYProgress, scrollY } = useScroll();
 
   // --- EFFECT: Mouse Tracking & Hover Detection ---
   useEffect(() => {
@@ -26,23 +28,13 @@ export default function InteractiveUI() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // --- EFFECT: Scroll Tracking ---
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollTop;
-      const windowHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-
-      const scroll = totalScroll / windowHeight;
-      setScrollProgress(scroll);
-
-      setIsVisible(totalScroll > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // --- EFFECT: Scroll Tracking (Efficiently via Framer Motion) ---
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const shouldBeVisible = latest > 50;
+    if (shouldBeVisible !== isVisible) {
+      setIsVisible(shouldBeVisible);
+    }
+  });
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -53,7 +45,7 @@ export default function InteractiveUI() {
 
   const circleRadius = 22;
   const circumference = 2 * Math.PI * circleRadius;
-  const strokeDashoffset = circumference - scrollProgress * circumference;
+  const strokeDashoffset = useTransform(scrollYProgress, [0, 1], [circumference, 0]);
 
   return (
     <>
@@ -106,7 +98,7 @@ export default function InteractiveUI() {
             strokeWidth="3"
             fill="none"
           />
-          <circle
+          <motion.circle
             cx="28"
             cy="28"
             r={circleRadius}
@@ -114,8 +106,7 @@ export default function InteractiveUI() {
             strokeWidth="3"
             fill="none"
             strokeDasharray={circumference}
-            strokeDashoffset={strokeDashoffset}
-            className="transition-all duration-150 ease-out"
+            style={{ strokeDashoffset }}
             strokeLinecap="round"
           />
         </svg>

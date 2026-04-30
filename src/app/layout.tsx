@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import InteractiveUI from "@/components/InteractiveUI";
 
-const poppins = Poppins({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} font-sans h-full antialiased scroll-smooth`}
+      className={`dark ${montserrat.variable} font-sans h-full antialiased scroll-smooth`}
       suppressHydrationWarning
     >
       <body

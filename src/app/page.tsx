@@ -4,6 +4,9 @@ import { About } from "@/components/About";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import TechStack from "@/components/TechStack";
 import Qualification from "@/components/Qualification";
+import FeaturedProjects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,11 +17,9 @@ export default function Home() {
       <About />
       <TechStack />
       <Qualification />
-      {/* 
-        Remaining sections to be added:
-        - Projects
-        - Contact 
-      */}
+      <FeaturedProjects />
+      <Contact />
+      <Footer />
     </main>
   );
 }

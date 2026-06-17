@@ -70,10 +70,10 @@ export function About() {
                 </div>
                 <div>
                   <div className="font-bold text-gray-900 dark:text-white leading-tight">
-                    4th Year
+                    CSE Graduate
                   </div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">
-                    CSE Student
+                    Problem Solver
                   </div>
                 </div>
               </motion.div>
@@ -111,16 +111,13 @@ export function About() {
             transition={{ duration: 0.8 }}
             className="flex flex-col gap-8 text-gray-600 dark:text-gray-300 order-1 lg:order-2"
           >
-            <div className="space-y-5 text-base sm:text-lg leading-relaxed">
+            <div className="space-y-5 text-base sm:text-lg leading-relaxed text-justify">
               <p>
                 I am a{" "}
                 <strong className="text-gray-900 dark:text-white font-semibold">
-                  Computer Science student
+                  Computer Science Graduate
                 </strong>{" "}
-                passionate about building scalable web applications, solving
-                algorithmic challenges, and exploring AI. Currently, I am
-                focused on full-stack development and advancing my knowledge in
-                artificial intelligence.
+                passionate about building scalable web applications, solving algorithmic challenges and exploring artificial intelligence. I am currently focused on full-stack development and continuously expanding my knowledge of AI and modern software development technologies.
               </p>
 
               <p>
@@ -138,7 +135,7 @@ export function About() {
             {/* CTA Button */}
             <div className="pt-2 flex justify-center lg:justify-start">
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1vUCV6HGDYcrVXxMLzxGJqrPp8piI-kw5/view?usp=sharing"
                 download
                 className="group relative inline-flex items-center gap-3 px-6 py-3 rounded-full font-medium text-sm sm:text-base overflow-hidden border border-black/15 dark:border-white/10 text-gray-800 dark:text-white shadow-sm transition-all duration-300 hover:shadow-violet-500/20 hover:shadow-lg hover:border-violet-400/50 hover:scale-[1.03]"
               >

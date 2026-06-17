@@ -129,7 +129,7 @@ export function Hero() {
           </div>
 
           <div className="space-y-1 text-gray-500 dark:text-gray-400 text-sm sm:text-base">
-            <p>🚀 Turning ideas into Stunning Websites 💻</p>
+            <p>Turning ideas into Stunning Websites 💻</p>
             <p>| Available for projects and collaborations 🌟</p>
           </div>
 
@@ -265,7 +265,7 @@ export function Hero() {
               <FolderGit2 className="w-5 h-5 text-cyan-500 shrink-0" />
               <div>
                 <div className="font-bold text-lg leading-none text-gray-900 dark:text-white">
-                  30+
+                  15+
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400">
                   Finished
